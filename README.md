@@ -99,11 +99,14 @@ You can minimze the screen with `CTRL+A+D`
 To open your screen again:`screen -r dria`
 
 
-## Earn Node-Keeper Role
+## 5- Earn Node-Keeper Role
 Join [Discord](https://discord.gg/dria) and Fill the [Form](https://docs.google.com/forms/d/e/1FAIpQLSeK090ejc4dg5x1ztb_yAOxGz5o1V8JUqDa-o3AwV1Lq7NpMA/viewform
 ) to receive role
 
 ![image](https://github.com/user-attachments/assets/4850511f-e9f7-4d5a-9270-2a2613439cc1)
+
+## 6- Check your points
+https://steps.leaderboard.dria.co/
 
 #
 
