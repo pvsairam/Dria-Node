@@ -4,7 +4,7 @@
 * Official Guide + Windows Version: https://dria.co/join
 * This guide is for Linux AMD (aka VPS)
 
-## Install Dependecies
+## 1- Install Dependecies
 ```console
 # Docker
 sudo apt update -y && sudo apt upgrade -y
@@ -35,7 +35,7 @@ docker --version
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-## Install Dria
+## 2- Install Dria
 ```
 cd $HOME
 curl -L -o dkn-compute-node.zip https://github.com/firstbatchxyz/dkn-compute-launcher/releases/latest/download/dkn-compute-launcher-linux-amd64.zip
@@ -47,36 +47,23 @@ unzip dkn-compute-node.zip
 cd dkn-compute-node
 ```
 
-## Run Dria Node
+## 3- Run Dria Node
 ```
 ./dkn-compute-launcher
 ```
-1. Enter your DKN wallet Secret key (Your metamask Private Key without `0x`)
-2. Pick a Model
+**1. Enter your DKN wallet Secret key (Your metamask Private Key without `0x`)**
+**2. Pick a Model**
+* I've picked three models (`Gemini`, `Ollama` and `OpenAI`) by writing `6,10,45`
+* `Gemini` is a google API with upto 1500 free requests daily, No cost, doesn't need VPS resources. Get your Google API [here](https://aistudio.google.com/app/apikey)
+* `Ollama` downloads and runs a local model host locally in your server, No cost, but it uses your VPS or system resources
+* `OpenAI` doesn't need system resources and it's only API but it needs a monthly payment which means it may not give you points if you use free version, if you have chosen it, get your API [here](https://platform.openai.com/api-keys)
+
+![Screenshot_459](https://github.com/user-attachments/assets/7c8aaf5e-fcf8-480c-945c-beceecb29b28)
 
 
-* Before picking your models, Check the team's guide:
+**3. Skip Jina & Serper API key by pressing Enter**
 
-> Model types team suggests to complete most tasks:
-> 
-![Screenshot_386](https://github.com/user-attachments/assets/b87f4a64-4c02-4a8f-b4b9-208f072634d0)
-
-
-> Model recommendations based on your resource capacity
-> 
-![Screenshot_387](https://github.com/user-attachments/assets/245da204-9a41-4027-98aa-b14af0c17f64)
-
-
-
-* I've picked two models (`Ollama` and `OpenAI`) by writing `3,23`
-* `OpenAI` doesn't need system resources and it's only API, if you have chosen it, get your API [here](https://platform.openai.com/api-keys)
-* `Ollama` downloads and runs a local model host locally in your server, No cost, but it use your system resources
-
-![Screenshot_390](https://github.com/user-attachments/assets/df7d8096-ff34-4f5a-8a2b-0f2030952506)
-
-3. Skip Jina & Serper API key by pressing Enter
-
-4. Now your node will start Downloading Models files and Testing them
+**4. Now your node will start Downloading Models files and Testing them**
 **each model must pass its test and it only depends on your system specification**
 
 > Error: If you had any **port** conflicts, you must change the ports in `.env` file or use this: `nano $HOME/dkn-compute-node/.env`
@@ -91,10 +78,8 @@ When the Node started logging, Head back to the first lines of the logs and chec
 > - Since I wanted to use `Ollama` too because it's free, so I had to stop some of my other running dockers, then restart the Dria script to pass the test (Testing `Ollama` highly depends on your system resources, after testing is passed, it keeps running with very low resources)
 > 
 > - If you wanted to restart the node to *change* Models, you can clear `DKN_MODELS=` variable in `.env` file or use `nano $HOME/dkn-compute-node/.env`, then rerun Dria using `./dkn-compute-launcher`
->   
-> 
 
-## Re-run Dria Node
+## 4- Re-run Dria Node
 Now you ensured that your Models passed the test and your node is running, you should re-run your node to start it in a screen. press `Ctrl+C` and exit the node
 
 ```
@@ -121,4 +106,31 @@ Join [Discord](https://discord.gg/dria) and Fill the [Form](https://docs.google.
 
 #
 
-They will soon add a dashboard to track your progress
+## Optional: Update Node
+### 1- Delete Old files
+```
+cd $HOME
+rm -rf dkn-compute-node.zip
+rm -rf dkn-compute-node
+```
+
+### 2- Stop Nodes
+**Stop Ollama Node**
+```console
+pgrep ollama
+# Example: if 74877, then use:
+kill 74877
+
+# OR
+
+sudo systemctl stop ollama
+sudo systemctl disable ollama
+```
+
+**Stop Dria (Terminate screen)**
+```console
+screen -XS dria quit
+```
+
+### 3- Update and Rerun node
+Start from Step [Install Dria](https://github.com/0xmoei/Dria-Node/edit/main/README.md#install-dria)
