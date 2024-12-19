@@ -52,6 +52,7 @@ cd dkn-compute-node
 ./dkn-compute-launcher
 ```
 **1. Enter your DKN wallet Secret key (Your metamask Private Key without `0x`)**
+
 **2. Pick a Model**
 * I've picked three models (`Gemini`, `Ollama` and `OpenAI`) by writing `6,10,45`
 * `Gemini` is a google API with upto 1500 free requests daily, No cost, doesn't need VPS resources. Get your Google API [here](https://aistudio.google.com/app/apikey)
