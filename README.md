@@ -54,10 +54,11 @@ cd dkn-compute-node
 **1. Enter your DKN wallet Secret key (Your metamask Private Key without `0x`)**
 
 **2. Pick a Model**
-* I've picked three models (`Gemini`, `Ollama` and `OpenAI`) by writing `6,10,45`
+* I've picked three models (`Gemini`, `Openrouter` and `Ollama`) by writing `6,10,45`
 * `Gemini` is a google API with upto 1500 free requests daily, No cost, doesn't need VPS resources. Get your Google API [here](https://aistudio.google.com/app/apikey)
-* `Ollama` downloads and runs a local model host locally in your server, No cost, but it uses your VPS or system resources
-* `OpenAI` doesn't need system resources and it's only API but it needs a monthly payment which means it may not give you points if you use free version, if you have chosen it, get your API [here](https://platform.openai.com/api-keys)
+* `OpenRouter` is an API, You can buy credits with crypto to use it's API
+* `Ollama` downloads and runs a local model host locally in your server, No cost, but it uses your VPS or system resources. It needs a powerfull VPS, you can ignore and only use Openrouter and Gemini
+* `OpenAI` is an API but it needs a monthly payment which means it may not give you points if you use free version, if you have chosen it, get your API [here](https://platform.openai.com/api-keys)
 
 ![Screenshot_459](https://github.com/user-attachments/assets/7c8aaf5e-fcf8-480c-945c-beceecb29b28)
 
