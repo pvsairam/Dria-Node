@@ -69,17 +69,13 @@ cd dkn-compute-node
 **each model must pass its test and it only depends on your system specification**
 
 > Error: If you had any **port** conflicts, you must change the ports in `.env` file or use this: `nano $HOME/dkn-compute-node/.env`
-
-When the Node started logging, Head back to the first lines of the logs and check if both `Ollama` and `OpenAI` passed their tests and see their name in front of `using models` like mine in the following picture:
-
-![Screenshot_389](https://github.com/user-attachments/assets/7d016234-817e-4eef-9542-e256b4f68b7c)
-
-*If you didn't pass any of the Models:*
-> - I've chosen lightest `Ollama` model but if it didn't pass the test for you, you can ignore and continue using `OpenAI`
 > 
-> - Since I wanted to use `Ollama` too because it's free, so I had to stop some of my other running dockers, then restart the Dria script to pass the test (Testing `Ollama` highly depends on your system resources, after testing is passed, it keeps running with very low resources)
-> 
-> - If you wanted to restart the node to *change* Models, you can clear `DKN_MODELS=` variable in `.env` file or use `nano $HOME/dkn-compute-node/.env`, then rerun Dria using `./dkn-compute-launcher`
+> If you wanted to restart the node to *change* Models, you can clear `DKN_MODELS=` variable in `.env` file, then rerun Dria using `./dkn-compute-launcher`
+
+When the Node started logging, Head back to the first lines of the logs and check if both `Gemini` and `OpenRouter` passed their tests and see their name in front of `using models` like mine in the following picture:
+
+![Screenshot_464](https://github.com/user-attachments/assets/c66e3e05-c9a1-4463-b25a-5f3f22a8ef92)
+
 
 ## 4- Re-run Dria Node
 Now you ensured that your Models passed the test and your node is running, you should re-run your node to start it in a screen. press `Ctrl+C` and exit the node
