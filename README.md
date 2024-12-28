@@ -134,4 +134,4 @@ screen -XS dria quit
 ```
 
 ### 3- Update and Rerun node
-Start from Step [Install Dria](https://github.com/pvsairam/Dria-Node/edit/main/README.md#install-dria)
+Start from Step [Install Dria](https://github.com/pvsairam/Dria-Node?tab=readme-ov-file#2--install-dria)
