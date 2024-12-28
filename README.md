@@ -54,7 +54,7 @@ cd dkn-compute-node
 **1. Enter your DKN wallet Secret key (Your metamask Private Key without `0x`)**
 
 **2. Pick a Model**
-* *I've picked three models (`Gemini` and `Openrouter`) by writing `10,25`*
+* *I've picked three models (`Gemini` and `Openrouter`) by writing `11,25`*
 * `Gemini` is a google API with upto 1500 free requests daily, No cost, doesn't need VPS resources. Get your Google API [here](https://aistudio.google.com/app/apikey)
 * `OpenRouter` is an API, You can buy credits with crypto to use it, Get API [here](https://openrouter.ai/settings/keys), I think this one gives better points
 * `Ollama` downloads and runs a local model host locally in your server, No cost, but it uses your VPS or system resources. It needs a powerfull VPS, you can ignore and only use Openrouter and Gemini
@@ -134,4 +134,4 @@ screen -XS dria quit
 ```
 
 ### 3- Update and Rerun node
-Start from Step [Install Dria](https://github.com/0xmoei/Dria-Node/edit/main/README.md#install-dria)
+Start from Step [Install Dria](https://github.com/pvsairam/Dria-Node/edit/main/README.md#install-dria)
